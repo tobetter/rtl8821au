@@ -5,6 +5,7 @@ Maintainer: morrownr <morrownr@gmail.com>,
 	Dongjin Kim <tobetter@gmail.com>
 Build-Depends: debhelper (>= 10),
                 dkms,
+                dh-dkms,
                 bc
 Standards-Version: 4.3.0
 Vcs-Browser: https://github.com/morrownr/8821au.git
