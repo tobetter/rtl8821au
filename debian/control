@@ -14,7 +14,7 @@ Vcs-Git: https://github.com/morrownr/8821au.git
 Package: rtl8821au-dkms
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, dkms, dpkg-dev, linux-firmware
+Depends: ${misc:Depends}, dkms, dpkg-dev, linux-firmware | firmware-realtek
 Provides: rtl8821au-module
 Description: DKMS files to build and install rtl8821au
  The rtl8821au driver provides the driver for Realtek RTL8811CU/RTL8821AU
