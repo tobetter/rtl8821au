@@ -87,7 +87,7 @@ int hmac_sha256_vector(const u8 *key, size_t key_len, size_t num_elem,
 	return sha256_vector(2, _addr, _len, mac);
 }
 
-
+#if (LINUX_VERSION_CODE <= KERNEL_VERSION(6, 16, 0))
 /**
  * hmac_sha256 - HMAC-SHA256 over data buffer (RFC 2104)
  * @key: Key for HMAC operations
@@ -102,3 +102,4 @@ int hmac_sha256(const u8 *key, size_t key_len, const u8 *data,
 {
 	return hmac_sha256_vector(key, key_len, 1, &data, &data_len, mac);
 }
+#endif
