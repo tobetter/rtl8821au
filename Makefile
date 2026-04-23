@@ -2476,6 +2476,8 @@ rtk_core += \
 		core/crypto/rtw_crypto_wrap.o \
 		core/rtw_swcrypto.o
 
+ccflags-y += $(EXTRA_CFLAGS)
+
 $(MODULE_NAME)-y += $(rtk_core)
 
 $(MODULE_NAME)-$(CONFIG_WAPI_SUPPORT) += core/rtw_wapi.o	\
