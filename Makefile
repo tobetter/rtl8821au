@@ -502,7 +502,7 @@ ifeq ($(CONFIG_RTL8812A), n)
 RTL871X = rtl8821a
 ifeq ($(CONFIG_USB_HCI), y)
 ifeq ($(CONFIG_BT_COEXIST), y)
-MODULE_NAME := 8821au
+MODULE_NAME := rtl8821au
 else
 MODULE_NAME := 8811au
 endif
@@ -2520,7 +2520,7 @@ uninstall:
 sign:
 	@openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj "/CN=Custom MOK/"
 	@mokutil --import MOK.der
-	@$(KSRC)/scripts/sign-file sha256 MOK.priv MOK.der 8821au.ko
+	@$(KSRC)/scripts/sign-file sha256 MOK.priv MOK.der rtl8821au.ko
 
 sign-install: sign install
 
